@@ -1,11 +1,11 @@
 using Avalonia.Controls;
 
-namespace avatrans.Views;
+namespace Avatrans.Views;
 
 public partial class MainWindow : Window
 {
-    public MainWindow()
-    {
-        InitializeComponent();
-    }
+	public MainWindow()
+	{
+		InitializeComponent();
+	}
 }

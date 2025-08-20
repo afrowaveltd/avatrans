@@ -1,13 +1,13 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:avatrans.ViewModels"
+        xmlns:vm="using:Avatrans.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="avatrans.Views.MainWindow"
+        x:Class="Avatrans.Views.MainWindow"
         x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/icon-32x32.png"
-        Title="avatrans">
+        Title="Avatrans">
 
     <Design.DataContext>
         <!-- This only sets the DataContext for the previewer in an IDE,
@@ -15,6 +15,6 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Button>Calculate</Button>
+    <Button HorizontalAlignment="Center">Calculate</Button>
 
 </Window>

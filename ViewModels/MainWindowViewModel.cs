@@ -1,6 +1,6 @@
-﻿namespace avatrans.ViewModels;
+﻿namespace Avatrans.ViewModels;
 
 public partial class MainWindowViewModel : ViewModelBase
 {
-    public string Greeting { get; } = "Welcome to Avalonia!";
+	public string Greeting { get; } = "Welcome to Avalonia!";
 }

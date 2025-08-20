@@ -1,31 +1,31 @@
-using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using avatrans.ViewModels;
+using Avatrans.ViewModels;
+using System;
 
-namespace avatrans;
+namespace Avatrans;
 
 public class ViewLocator : IDataTemplate
 {
 
-    public Control? Build(object? param)
-    {
-        if (param is null)
-            return null;
-        
-        var name = param.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
-        var type = Type.GetType(name);
+	public Control? Build(object? param)
+	{
+		if(param is null)
+			return null;
 
-        if (type != null)
-        {
-            return (Control)Activator.CreateInstance(type)!;
-        }
-        
-        return new TextBlock { Text = "Not Found: " + name };
-    }
+		var name = param.GetType().FullName!.Replace("ViewModel", "View", StringComparison.Ordinal);
+		var type = Type.GetType(name);
 
-    public bool Match(object? data)
-    {
-        return data is ViewModelBase;
-    }
+		if(type != null)
+		{
+			return (Control)Activator.CreateInstance(type)!;
+		}
+
+		return new TextBlock { Text = "Not Found: " + name };
+	}
+
+	public bool Match(object? data)
+	{
+		return data is ViewModelBase;
+	}
 }
