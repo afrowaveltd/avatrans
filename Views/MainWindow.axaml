@@ -1,5 +1,6 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Avatrans.MarkupExtensions"
         xmlns:vm="using:Avatrans.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -15,6 +16,9 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Button HorizontalAlignment="Center">Calculate</Button>
+     <TextBlock Text="{local:Localize WelcomeMessage}" 
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               FontSize="20"/>
 
 </Window>

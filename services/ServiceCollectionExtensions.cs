@@ -8,6 +8,7 @@ public static class ServiceCollectionExtensions
 	public static void AddCommonServices(this IServiceCollection collection)
 	{
 		// Register your common services here
+		collection.AddSingleton<ILocalizationService, LocalizationService>();
 		collection.AddTransient<MainWindowViewModel>();
 	}
 }
